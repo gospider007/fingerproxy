@@ -1,15 +1,15 @@
 <p align="center">
-  <a href="https://github.com/gospider007/requests"><img src="https://go.dev/images/favicon-gopher.png"></a>
+  <a href="https://github.com/gospider007/fingerproxy"><img src="https://go.dev/images/favicon-gopher.png"></a>
 </p>
 <p align="center"><strong>Proxy</strong> <em>- A next-generation fingerprint proxy for Golang.</em></p>
 <p align="center">
-<a href="https://github.com/gospider007/requests">
-    <img src="https://img.shields.io/github/last-commit/gospider007/requests">
+<a href="https://github.com/gospider007/fingerproxy">
+    <img src="https://img.shields.io/github/last-commit/gospider007/fingerproxy">
 </a>
-<a href="https://github.com/gospider007/requests">
+<a href="https://github.com/gospider007/fingerproxy">
     <img src="https://img.shields.io/badge/build-passing-brightgreen">
 </a>
-<a href="https://github.com/gospider007/requests">
+<a href="https://github.com/gospider007/fingerproxy">
     <img src="https://img.shields.io/badge/language-golang-brightgreen">
 </a>
 </p>
