@@ -43,14 +43,24 @@ The compiled executables are located in the dist directory.
 | gospider007_fingerproxy_spec | Browser fingerprint |
 | gospider007_fingerproxy_proxy | ip proxy |
 
-
 ## quick start
+## Installation
 ```bash
-./dist/myapp_darwin_arm64_v8.0/myapp 
+pip install git+https://github.com/gospider007/fingerproxy.git
 ```
-```bash
+## Run FingerProxy
+```
+fingerproxy
+```
+## Example Output:
+```
 listening on: 127.0.0.1:8080
 ```
+## Uninstall
+```bash
+pip uninstall fingerproxy
+```
+
 
 # Once the server is running on http://127.0.0.1:8080, you can make requests using any HTTP client:
 ```bash
