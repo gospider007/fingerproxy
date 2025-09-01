@@ -1,2 +1,0 @@
-[console_scripts]
-fingerproxy = fingerproxy.runner:run_service
