@@ -58,11 +58,11 @@ It provides unified support for HTTP/1, HTTP/2, WebSockets protocols.</h2>
 ## Installation
 ### github
 ```bash
-pip install git+https://github.com/gospider007/fingerproxy.git
+pip install --force-reinstall git+https://github.com/gospider007/fingerproxy.git
 ```
 ### gitee
 ```bash
-pip install git+https://gitee.com/gospider007/fingerproxy.git
+pip install --force-reinstall git+https://gitee.com/gospider007/fingerproxy.git
 ```
 
 ## Run FingerProxy
