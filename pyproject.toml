@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fingerproxy"
+version = "1.0.0"
+description = "FingerProxy service"
+readme = "README.md"
+requires-python = ">=3.8"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["fingerproxy*"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+fingerproxy = ["dist/**/*"]
+
+[project.scripts]
+fingerproxy = "fingerproxy.runner:run_service"
