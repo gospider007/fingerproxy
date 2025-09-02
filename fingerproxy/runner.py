@@ -50,3 +50,30 @@ def run_service():
 
 if __name__ == "__main__":
     run_service()
+
+
+
+
+
+
+
+
+
+
+
+
+# def ensure_dist_files():
+#     """确保 dist 文件夹最新"""
+#     src_dist = os.path.join(os.path.dirname(__file__), 'dist')
+#     # 安装后的目标目录
+#     dst_dist = os.path.join(sys.prefix, 'lib', f'python{sys.version_info.major}.{sys.version_info.minor}', 'site-packages', 'fingerproxy', 'dist')
+
+#     if os.path.exists(dst_dist):
+#         shutil.rmtree(dst_dist)  # 删除旧文件
+#     shutil.copytree(src_dist, dst_dist)
+
+# def run_service():
+#     ensure_dist_files()
+#     # 启动 fingerproxy 服务
+#     print("FingerProxy service started...")
+#     # 这里放你原来的启动逻辑
