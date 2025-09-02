@@ -11,10 +11,11 @@ requires-python = ">=3.8"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["fingerproxy*"]
+include = ["dist"]
 
 [tool.setuptools]
 include-package-data = true
+
 
 [project.scripts]
 fingerproxy = "fingerproxy.runner:run_service"

@@ -62,7 +62,7 @@ pip install --force-reinstall git+https://github.com/gospider007/fingerproxy.git
 ```
 ### gitee
 ```bash
-pip install --upgrade --force-reinstall git+https://gitee.com/gospider007/fingerproxy.git
+pip install --force-reinstall git+https://gitee.com/gospider007/fingerproxy.git
 ```
 
 ## Run FingerProxy
