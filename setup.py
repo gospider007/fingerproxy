@@ -18,7 +18,7 @@ class CustomInstall(install):
     def run(self):
         # 获取安装路径
         install_path = os.path.join(self.install_lib, 'your_package_name', 'dist')
-
+        print("install path ===. ",install_path)
         # 删除旧的 dist 文件夹
         if os.path.exists(install_path):
             print(f"Removing old dist folder: {install_path}")
