@@ -5,7 +5,7 @@ import sys
 
 def get_executable_path():
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    dist_dir = os.path.join(base_dir, '..', 'dist')
+    dist_dir = os.path.join(base_dir, 'dist')
 
     system = platform.system().lower()
     machine = platform.machine().lower()

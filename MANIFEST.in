@@ -1,1 +1,1 @@
-recursive-include dist *
+recursive-include fingerproxy/dist *
