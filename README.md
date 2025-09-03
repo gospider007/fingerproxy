@@ -37,7 +37,7 @@ It provides unified support for HTTP/1, HTTP/2, WebSockets protocols.</h2>
 
 | headers key |headers value |
 | --- | --- |
-| `gospider007_fingerproxy_spec` | Browser fingerprint with [fp](https://github.com/gospider007/fp)|
+| `gospider007_fingerproxy_spec` | Browser fingerprint with [fp](https://github.com/gospider007/fp) |
 | `gospider007_fingerproxy_proxy` | ip proxy |
 | `gospider007_fingerproxy_specId` | Fingerprint configuration |
 </center>
@@ -46,7 +46,7 @@ It provides unified support for HTTP/1, HTTP/2, WebSockets protocols.</h2>
 ## gospider007_fingerproxy_specId
 <center>
 
-| gospider007_fingerproxy_specId | Browser | Platform｜
+| gospider007_fingerproxy_specId | Browser | Platform |
 | --- | --- | --- |
 | Chrome_Mac_arm64_137 | Chrome | Mac |
 | Firefox_Mac_arm64_140 | Firefox | Mac |

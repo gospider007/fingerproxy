@@ -1,1 +1,1 @@
-{"project_name":"fingerproxy","tag":"v0.0.0","previous_tag":"","version":"0.0.0-SNAPSHOT-9a5d282","commit":"9a5d282208697c265050d21cfa93652fad5d5d00","date":"2025-09-02T15:00:08.494023+08:00","runtime":{"goos":"darwin","goarch":"arm64"}}
+{"project_name":"fingerproxy","tag":"v0.0.0","previous_tag":"","version":"0.0.0-SNAPSHOT-76776c9","commit":"76776c9595917437258c082fde4fdf2142e63054","date":"2025-09-03T09:19:18.887897+08:00","runtime":{"goos":"darwin","goarch":"arm64"}}

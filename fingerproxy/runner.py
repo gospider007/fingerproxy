@@ -1,7 +1,6 @@
 import os
 import platform
 import subprocess
-import sys
 
 def get_executable_path():
     base_dir = os.path.dirname(os.path.abspath(__file__))
