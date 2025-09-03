@@ -37,16 +37,16 @@ It provides unified support for HTTP/1, HTTP/2, WebSockets protocols.</h2>
 
 | headers key |headers value |
 | --- | --- |
-| `gospider007_fingerproxy_spec` | Browser fingerprint with [fp](https://github.com/gospider007/fp) |
-| `gospider007_fingerproxy_proxy` | ip proxy |
-| `gospider007_fingerproxy_specId` | Fingerprint configuration |
+| `Gospider007-Fingerproxy-Spec` | Browser fingerprint with [fp](https://github.com/gospider007/fp) |
+| `Gospider007-Fingerproxy-Proxy` | ip proxy |
+| `Gospider007-Fingerproxy-SpecId` | Fingerprint configuration |
 </center>
 
 
-## gospider007_fingerproxy_specId
+## Gospider007-Fingerproxy-SpecId
 <center>
 
-| gospider007_fingerproxy_specId | Browser | Platform |
+| Gospider007-Fingerproxy-SpecId | Browser | Platform |
 | --- | --- | --- |
 | Chrome_Mac_arm64_137 | Chrome | Mac |
 | Firefox_Mac_arm64_140 | Firefox | Mac |
@@ -83,7 +83,7 @@ pip uninstall fingerproxy
 ```bash
 curl -k "https://tools.scrapfly.io/api/fp/anything" \
      -x "http://127.0.0.1:8080" \
-     -H "gospider007_fingerproxy_specId: Chrome_Mac_arm64_137"
+     -H "Gospider007-Fingerproxy-SpecId: Chrome_Mac_arm64_137"
 ```
 ### python
 ```python
@@ -95,7 +95,7 @@ proxies = {
 }
 
 headers = {
-    'gospider007_fingerproxy_specId': 'Chrome_Mac_arm64_137',
+    'Gospider007-Fingerproxy-SpecId': 'Chrome_Mac_arm64_137',
 }
 
 response = requests.get('https://tools.scrapfly.io/api/fp/anything', headers=headers, proxies=proxies, verify=False)
@@ -117,7 +117,7 @@ import (
 
 func main() {
 	req, _ := http.NewRequest("GET", "https://tools.scrapfly.io/api/fp/anything", nil)
-	req.Header.Set("gospider007_fingerproxy_specId", "Chrome_Mac_arm64_137")
+	req.Header.Set("Gospider007-Fingerproxy-SpecId", "Chrome_Mac_arm64_137")
 	resp, err := (&http.Client{Transport: &http.Transport{
 		Proxy: func(r *http.Request) (*url.URL, error) {
 			return url.Parse("http://127.0.0.1:8080")
@@ -141,7 +141,7 @@ import axios from 'axios';
 
 const response = await axios.get('https://tools.scrapfly.io/api/fp/anything', {
   headers: {
-    'gospider007_fingerproxy_specId': 'Chrome_Mac_arm64_137'
+    'Gospider007-Fingerproxy-SpecId': 'Chrome_Mac_arm64_137'
   },
   proxy: {
     protocol: 'http',
@@ -159,7 +159,7 @@ curl_setopt($ch, CURLOPT_URL, 'https://tools.scrapfly.io/api/fp/anything');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    'gospider007_fingerproxy_specId: Chrome_Mac_arm64_137',
+    'Gospider007-Fingerproxy-SpecId: Chrome_Mac_arm64_137',
 ]);
 curl_setopt($ch, CURLOPT_PROXY, 'http://127.0.0.1:8080');
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
