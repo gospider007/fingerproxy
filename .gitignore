@@ -3,3 +3,4 @@
 *.sum
 *.yaml
 *.DS_Store
+*.sh
