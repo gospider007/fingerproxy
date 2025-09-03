@@ -2,3 +2,4 @@
 *.mod
 *.sum
 *.yaml
+*.DS_Store
