@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://github.com/gospider007/fingerproxy"><img src="https://go.dev/images/favicon-gopher.png"></a>
 </p>
-<p align="center"><strong>Proxy</strong> <em>- A next-generation fingerprint proxy for Golang.</em></p>
+<p align="center">A crawler-focused forward proxy with fingerprint spoofing</p>
 <p align="center">
 <a href="https://github.com/gospider007/fingerproxy">
     <img src="https://img.shields.io/github/last-commit/gospider007/fingerproxy">
@@ -15,14 +15,13 @@
 </p>
 
 ---
-<h2 align="center">A crawler-focused forward proxy with fingerprint spoofing</h2>
 
-<h2 align="center">Fingerproxy is a fully featured Golang-based forward proxy app with browser fingerprint spoofing.
-With just a few lines of code, you can enable powerful fingerprint proxy capabilities.
-It provides unified support for HTTP/1, HTTP/2, WebSockets protocols.</h2>
+<h2 align="center">Fingerproxy is a fully featured Golang-based forward proxy app with browser fingerprint spoofing. With just a few lines of code, you can enable powerful fingerprint proxy capabilities. It provides unified support for HTTP/1, HTTP/2, WebSockets protocols.</h2>
 
 ## The fingerprints used in the project are generated from: [fp](https://github.com/gospider007/fp)
+## The root certificate can be downloaded here: [root certificate](https://github.com/gospider007/gtls/blob/master/ssl/gospider.crt)
 
+# features
 * True forward proxy transmission, implemented no differently from an IP proxy server
 * Simultaneous support for HTTP, HTTPS, and SOCKS5 proxy protocols on the same port
 * Automatic upgrade to HTTP/2
@@ -54,7 +53,7 @@ It provides unified support for HTTP/1, HTTP/2, WebSockets protocols.</h2>
 
 </center>
 
-## quick start
+# quick start
 ## Installation
 ### github
 ```bash
