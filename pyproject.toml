@@ -18,5 +18,5 @@ include-package-data = true
 
 
 [project.scripts]
-fingerproxy = "fingerproxy.runner:run"
-fingerproxy_stop = "fingerproxy.runner:stop"
+fingerproxy = "fingerproxy.script:run"
+fingerproxy_stop = "fingerproxy.script:stop"
