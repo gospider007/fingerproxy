@@ -19,7 +19,6 @@
 <h2 align="center">Fingerproxy is a fully featured Golang-based forward proxy app with browser fingerprint spoofing. With just a few lines of code, you can enable powerful fingerprint proxy capabilities. It provides unified support for HTTP/1, HTTP/2, WebSockets protocols.</h2>
 
 ## The fingerprints used in the project are generated from: [fp](https://github.com/gospider007/fp)
-## The root certificate can be downloaded here: [root certificate](https://github.com/gospider007/gtls/blob/master/ssl/gospider.crt)
 
 # features
 * True forward proxy transmission, implemented no differently from an IP proxy server
@@ -31,7 +30,16 @@
 * Request body compression, enforcing server support for zstd, br, gzip, deflate, and other compressed responses to reduce bandwidth usage
 
 
-## headers key table
+# Fingerproxy CLI Usage
+<center>
+
+| Flag                     | Description                            |
+| ------------------------ | -------------------------------------- |
+| `-mimt-root-cert string` | Path to the MITM root certificate file |
+| `-mimt-root-key string`  | Path to the MITM root key file         |
+</center>
+
+# headers key table
 <center>
 
 | headers key |headers value |
@@ -40,7 +48,6 @@
 | `Gospider007-Fingerproxy-Proxy` | ip proxy |
 | `Gospider007-Fingerproxy-SpecId` | Fingerprint configuration |
 </center>
-
 
 ## Gospider007-Fingerproxy-SpecId
 <center>
@@ -80,6 +87,8 @@ listening on: 127.0.0.1:8080
 ```bash
 pip uninstall fingerproxy
 ```
+
+
 
 # Once the server is running on http://127.0.0.1:8080, you can make requests using any HTTP client:
 ### curl
