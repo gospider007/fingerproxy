@@ -68,6 +68,10 @@ pip install --force-reinstall git+https://gitee.com/gospider007/fingerproxy.git
 ```
 fingerproxy
 ```
+## Stop FingerProxy
+```
+fingerproxy_stop
+```
 ## Example Output:
 ```
 listening on: 127.0.0.1:8080
