@@ -45,8 +45,10 @@
 | headers key |headers value |
 | --- | --- |
 | `Gospider007-Fingerproxy-Spec` | Browser fingerprint with [fp](https://github.com/gospider007/fp) |
-| `Gospider007-Fingerproxy-Proxy` | ip proxy |
+| `Gospider007-Fingerproxy-Proxy` | IP Proxy |
 | `Gospider007-Fingerproxy-SpecId` | Fingerprint configuration |
+| `Gospider007-Fingerproxy-ForceHttp1` | Force HTTP/1 protocol |
+| `Gospider007-Fingerproxy-ForceHttp3` | Force HTTP/3 protocol |
 </center>
 
 ## Gospider007-Fingerproxy-SpecId
