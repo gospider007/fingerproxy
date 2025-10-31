@@ -43,12 +43,12 @@
 <center>
 
 | headers key |headers value |demo |
-| --- | --- |
-| `Gospider007-Fingerproxy-Spec` | Browser fingerprint with [fp](https://github.com/gospider007/fp) | "xxxxxx"
-| `Gospider007-Fingerproxy-Proxy` | IP Proxy | "http://127.0.0.1:8080"
-| `Gospider007-Fingerproxy-SpecId` | Fingerprint configuration | Chrome_Mac_arm64_137
-| `Gospider007-Fingerproxy-Forcehttp1` | Force HTTP/1 protocol | true
-| `Gospider007-Fingerproxy-Forcehttp3` | Force HTTP/3 protocol | true
+| --- | --- | --- |
+| `Gospider007-Fingerproxy-Spec` | Browser fingerprint with [fp](https://github.com/gospider007/fp) |  |
+| `Gospider007-Fingerproxy-Proxy` | IP Proxy | http://127.0.0.1:8080 |
+| `Gospider007-Fingerproxy-SpecId` | Fingerprint configuration | Chrome_Mac_arm64_137 |
+| `Gospider007-Fingerproxy-Forcehttp1` | Force HTTP/1 protocol | true |
+| `Gospider007-Fingerproxy-Forcehttp3` | Force HTTP/3 protocol | true |
 </center>
 
 ## Gospider007-Fingerproxy-SpecId
