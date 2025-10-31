@@ -3,9 +3,11 @@ import platform
 import subprocess
 import psutil
 import json
+
+
 def get_executable_path():
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    dist_dir = os.path.join(base_dir, 'dist')
+    dist_dir = os.path.join(base_dir, "dist")
 
     system = platform.system().lower()
     machine = platform.machine().lower()
@@ -36,15 +38,21 @@ def get_executable_path():
         raise FileNotFoundError(f"Executable not found: {exe_path}")
 
     return exe_path
+
+
 def get_file_path():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(base_dir, "daemon_pid.json")
     return file_path
+
+
 PID_FILE = get_file_path()
+
 
 def _save_pid(pid):
     with open(PID_FILE, "w") as f:
         json.dump({"pid": pid}, f)
+
 
 def _load_pid():
     if os.path.exists(PID_FILE):
@@ -52,10 +60,11 @@ def _load_pid():
             return json.load(f)["pid"]
     return None
 
+
 def run():
     """启动后台进程并记录 PID"""
     if status():
-        print("后台进程已启动")
+        print("后台进程已启动，关闭执行：fingerproxy_stop")
         return
     system = platform.system().lower()
     cmd = get_executable_path()
@@ -67,7 +76,7 @@ def run():
             creationflags=DETACHED_PROCESS | CREATE_NEW_PROCESS_GROUP,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
-            stdin=subprocess.DEVNULL
+            stdin=subprocess.DEVNULL,
         )
     else:
         proc = subprocess.Popen(
@@ -75,10 +84,11 @@ def run():
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
             stdin=subprocess.DEVNULL,
-            preexec_fn=os.setsid
+            preexec_fn=os.setsid,
         )
     _save_pid(proc.pid)
     print(f"[{system}] 后台进程已启动，PID: {proc.pid}")
+
 
 def stop():
     """停止后台进程"""
@@ -99,6 +109,7 @@ def stop():
         if os.path.exists(PID_FILE):
             os.remove(PID_FILE)
 
+
 def status():
     """查看后台进程状态"""
     pid = _load_pid()
@@ -111,9 +122,6 @@ def status():
     else:
         print(f"进程 {pid} 已停止")
         return False
-
-
-
 
 
 if __name__ == "__main__":
