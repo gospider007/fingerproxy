@@ -21,6 +21,7 @@
 ## The fingerprints used in the project are generated from: [fp](https://github.com/gospider007/fp)
 
 # features
+* Automatically switch the fingerprint based on the user-agent
 * True forward proxy transmission, implemented no differently from an IP proxy server
 * Simultaneous support for HTTP, HTTPS, and SOCKS5 proxy protocols on the same port
 * Automatic upgrade to HTTP/2
@@ -46,21 +47,11 @@
 | --- | --- | --- |
 | `Gospider007-Fingerproxy-Spec` | Browser fingerprint with [fp](https://github.com/gospider007/fp) |  |
 | `Gospider007-Fingerproxy-Proxy` | IP Proxy | http://127.0.0.1:8080 |
-| `Gospider007-Fingerproxy-SpecId` | Fingerprint configuration | Chrome_Mac_arm64_137 |
-| `Gospider007-Fingerproxy-Forcehttp1` | Force HTTP/1 protocol | true |
-| `Gospider007-Fingerproxy-Forcehttp3` | Force HTTP/3 protocol | true |
+| `Gospider007-Fingerproxy-Force-Http1` | Force HTTP/1 protocol | true |
+| `Gospider007-Fingerproxy-Force-Http3` | Force HTTP/3 protocol | true |
 </center>
 
-## Gospider007-Fingerproxy-SpecId
-<center>
 
-| Gospider007-Fingerproxy-SpecId | Browser | Platform |
-| --- | --- | --- |
-| Chrome_Mac_arm64_137 | Chrome | Mac |
-| Firefox_Mac_arm64_140 | Firefox | Mac |
-| Safari_Mac_arm64_18 | Safari | Mac |
-
-</center>
 
 # quick start
 ## Installation
@@ -97,7 +88,7 @@ pip uninstall fingerproxy
 ```bash
 curl -k "https://tools.scrapfly.io/api/fp/anything" \
      -x "http://127.0.0.1:8080" \
-     -H "Gospider007-Fingerproxy-SpecId: Chrome_Mac_arm64_137"
+     -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.4 Safari/537.36"
 ```
 ### python
 ```python
@@ -109,7 +100,7 @@ proxies = {
 }
 
 headers = {
-    'Gospider007-Fingerproxy-SpecId': 'Chrome_Mac_arm64_137',
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.4 Safari/537.36',
 }
 
 response = requests.get('https://tools.scrapfly.io/api/fp/anything', headers=headers, proxies=proxies, verify=False)
@@ -131,7 +122,7 @@ import (
 
 func main() {
 	req, _ := http.NewRequest("GET", "https://tools.scrapfly.io/api/fp/anything", nil)
-	req.Header.Set("Gospider007-Fingerproxy-SpecId", "Chrome_Mac_arm64_137")
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.4 Safari/537.36")
 	resp, err := (&http.Client{Transport: &http.Transport{
 		Proxy: func(r *http.Request) (*url.URL, error) {
 			return url.Parse("http://127.0.0.1:8080")
@@ -155,7 +146,7 @@ import axios from 'axios';
 
 const response = await axios.get('https://tools.scrapfly.io/api/fp/anything', {
   headers: {
-    'Gospider007-Fingerproxy-SpecId': 'Chrome_Mac_arm64_137'
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.4 Safari/537.36'
   },
   proxy: {
     protocol: 'http',
@@ -173,7 +164,7 @@ curl_setopt($ch, CURLOPT_URL, 'https://tools.scrapfly.io/api/fp/anything');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    'Gospider007-Fingerproxy-SpecId: Chrome_Mac_arm64_137',
+    'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.4 Safari/537.36',
 ]);
 curl_setopt($ch, CURLOPT_PROXY, 'http://127.0.0.1:8080');
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
